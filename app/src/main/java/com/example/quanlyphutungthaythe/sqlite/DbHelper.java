@@ -17,8 +17,8 @@ public class DbHelper extends SQLiteOpenHelper {
                 "Id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "Name TEXT NOT NULL," +
                 "Category TEXT NOT NULL," +
-                "Desctiption TEXT NOT NULL," +
-                "Price FLOAT NOT NULL)";
+                "Description TEXT NOT NULL," +
+                "Price REAL NOT NULL)";
         String createAccountTableQuery = "CREATE TABLE IF NOT EXISTS Account("+
                 "Username TEXT PRIMARY KEY, " +
                 "Password TEXT NOT NULL)";
