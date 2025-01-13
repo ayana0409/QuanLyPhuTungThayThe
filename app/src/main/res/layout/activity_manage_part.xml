@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh sách phụ tùng"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_marginTop="70dp"/>
+    <ListView
+        android:id="@+id/lvPart"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/actionButtonAdd"
+        android:layout_marginEnd="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/add_fl_icon"
+        android:contentDescription="aaa"/>
+</LinearLayout>

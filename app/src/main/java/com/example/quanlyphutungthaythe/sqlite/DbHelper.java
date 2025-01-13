@@ -13,21 +13,24 @@ public class DbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createJobTableQuery = "CREATE TABLE IF NOT EXISTS Job("+
+        String createPartTableQuery = "CREATE TABLE IF NOT EXISTS Part("+
                 "Id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "Name TEXT NOT NULL)";
+                "Name TEXT NOT NULL," +
+                "Category TEXT NOT NULL," +
+                "Desctiption TEXT NOT NULL," +
+                "Price FLOAT NOT NULL)";
         String createAccountTableQuery = "CREATE TABLE IF NOT EXISTS Account("+
                 "Username TEXT PRIMARY KEY, " +
                 "Password TEXT NOT NULL)";
-        db.execSQL(createJobTableQuery);
+        db.execSQL(createPartTableQuery);
         db.execSQL(createAccountTableQuery);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String dropJobTable = "DROP TABLE IF EXISTS Job";
+        String dropPartTable = "DROP TABLE IF EXISTS Part";
         String dropAccountTable = "DROP TABLE IF EXISTS Account";
-        db.execSQL(dropJobTable);
+        db.execSQL(dropPartTable);
         db.execSQL(dropAccountTable);
         onCreate(db);
     }
