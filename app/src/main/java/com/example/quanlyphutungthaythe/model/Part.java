@@ -1,6 +1,8 @@
 package com.example.quanlyphutungthaythe.model;
 
-public class Part {
+import java.io.Serializable;
+
+public class Part implements Serializable {
     private int id;
     private String name, category, description;
     private float price;

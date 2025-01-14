@@ -16,6 +16,7 @@ import com.example.quanlyphutungthaythe.model.Part;
 import com.example.quanlyphutungthaythe.sqlite.PartDAO;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,6 +68,11 @@ public class ManagePartActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        lvPart.setOnItemClickListener((parent, view, position, id) -> {
+            Intent intent = new Intent(this, UpdateDeletePartActivity.class);
+            intent.putExtra("part", (Serializable) adapter.getItem(position));
+            startActivity(intent);
+        });
     }
 
     @Override

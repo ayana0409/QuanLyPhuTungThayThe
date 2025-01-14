@@ -48,14 +48,14 @@ public class PartDAO {
         return result > 0;
     }
 
-    public void updateJob(Part part){
-        String query = "UPDATE Job SET Name = ?, Category = ?, Description = ?, Price = ? WHERE Id = ?";
+    public void updatePart(Part part){
+        String query = "UPDATE Part SET Name = ?, Category = ?, Description = ?, Price = ? WHERE Id = ?";
         db.execSQL(query, new String[]{part.getName(), part.getCategory(), part.getDescription(),
                 String.valueOf(part.getPrice()), String.valueOf(part.getId())});
     }
 
-    public void deleteJob(int id){
-        String query = "DELETE FROM Job WHERE Id = ?";
+    public void deletePart(int id){
+        String query = "DELETE FROM Part WHERE Id = ?";
         db.execSQL(query, new String[]{String.valueOf(id)});
     }
 }
