@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">QuanLyPhuTungThayThe</string>
+
+    <string name="textViewDangNhap">ĐĂNG NHẬP</string>
+    <string name="inputEditTaiKhoan">Tài khoản</string>
+    <string name="inputEditMatKhau">Mật khẩu</string>
+    <string name="checkBoxLuu">Lưu thông tin</string>
+    <string name="buttonDangNhap">Đăng nhập</string>
 </resources>

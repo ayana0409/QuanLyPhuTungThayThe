@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/mainUserAdd"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@color/black">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/imageView"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_wellcome_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteY="56dp"></ImageView>
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ivProfile_AddUser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_avatar_background"
+        app:civ_border_width="5dp"
+        app:civ_circle_background_color="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintLeft_toLeftOf="@id/imageView"
+        app:layout_constraintRight_toRightOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/imageView"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivProfile_AddUser">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            android:background="@color/white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/edUsername_AddUser"
+                android:background="@color/white"
+                android:textSize="25dp"
+                android:hint="Tên người dùng"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            android:background="@color/white"
+            app:passwordToggleEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/edPassword_AddUser"
+                android:inputType="textPassword"
+                android:background="@color/white"
+                android:textSize="25dp"
+                android:hint="Mật khẩu"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            android:background="@color/white"
+            app:passwordToggleEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:id="@+id/edConfirm_AddUser"
+                android:inputType="textPassword"
+                android:background="@color/white"
+                android:textSize="25dp"
+                android:hint="Xác nhận mật khẩu"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="15dp"
+            android:id="@+id/btnAdd_AddUser"
+            android:text="Thêm tài khoản"
+            android:textSize="16sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="15dp"
+                android:textColor="@color/white"
+                android:text="Bạn đã có tài khoản?"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="15dp"
+                android:id="@+id/btnLogin_AddUser"
+                android:text="Đăng nhập"
+                android:textSize="16sp">
+            </Button>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity"
+    android:background="@color/white"
+    >
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="100dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textViewDangNhap"
+            android:textStyle="bold"
+            android:textColor="#3F5185"
+            android:textSize="30dp"
+            android:fontFamily="cursive"
+            android:layout_gravity="center"
+            />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_avatar_background" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:hint="@string/inputEditTaiKhoan"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPassWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:hint="@string/inputEditMatKhau"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:padding="15dp"
+            android:id="@+id/checkBoxSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkBoxLuu" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#94C9F0"
+            android:layout_gravity="center"
+            android:text="Đăng Nhập" />
+    </LinearLayout>
+
+</RelativeLayout>
