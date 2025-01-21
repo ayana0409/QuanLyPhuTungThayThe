@@ -19,8 +19,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-
-        Intent intent = new Intent(this, SiginActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
 
     }
