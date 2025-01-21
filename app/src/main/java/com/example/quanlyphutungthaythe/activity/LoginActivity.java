@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     //Bước 1: Khai báo các biến
     TextInputEditText editTextAccount, editTextPassWord;
     CheckBox checkBoxSave;
-    Button buttonLogin;
+    Button buttonLogin, btnSigin;
     //Bước 4 Khai báo tên tập tin
     String perferName = "DangNhapData";
     @Override
@@ -42,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         editTextPassWord = findViewById(R.id.editTextPassWord);
         checkBoxSave = findViewById(R.id.checkBoxSave);
         buttonLogin = findViewById(R.id.btnLogin);
+        btnSigin = findViewById(R.id.btnSigin);
     }
 
     //Bước 5 Viết hàm lưu trạng thái đăng nhập
@@ -93,15 +94,20 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+        btnSigin.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, SiginActivity.class);
+            startActivity(intent);
+            finish();
+        });
     }
 
     private void RestorePreferences() {
         SharedPreferences preferences = getSharedPreferences(perferName, MODE_PRIVATE);
 
-        boolean save = preferences.getBoolean("Lưu", false);
+        boolean save = preferences.getBoolean("Luu", false);
         if (save) {
-            String account = preferences.getString("Tài khoản", "");
-            String password = preferences.getString("Mật khẩu", "");
+            String account = preferences.getString("TaiKhoan", "");
+            String password = preferences.getString("MatKhau", "");
             editTextAccount.setText(account);
             editTextPassWord.setText(password);
         }
