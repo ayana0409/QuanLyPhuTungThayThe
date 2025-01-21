@@ -2,5 +2,4 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/mnuIntroduce" android:title="Giới thiệu"/>
     <item android:id="@+id/mnuLogin" android:title="Đăng nhập"/>
-    <item android:id="@+id/mnExit" android:title="Thoát"/>
 </menu>

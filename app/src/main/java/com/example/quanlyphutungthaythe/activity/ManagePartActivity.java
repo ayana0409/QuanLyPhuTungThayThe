@@ -2,6 +2,9 @@ package com.example.quanlyphutungthaythe.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -79,6 +82,22 @@ public class ManagePartActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         loadData();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater in = getMenuInflater();
+        in.inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.mnuLogin){
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }
