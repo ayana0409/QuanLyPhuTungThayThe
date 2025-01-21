@@ -23,8 +23,8 @@ public class AccountDAO {
         return true;
     }
     //=============================================
-    public Boolean isAccount(String user){
-        Cursor cursor = db.rawQuery("SELECT * FROM Account WHERE User = ?", new String[]{user});
+    public Boolean isAccount(String username){
+        Cursor cursor = db.rawQuery("SELECT * FROM Account WHERE Username = ?", new String[]{username});
         if (cursor.getCount() > 0)
             return true;
         else
