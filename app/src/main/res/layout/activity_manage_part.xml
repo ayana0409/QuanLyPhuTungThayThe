@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_marginTop="80dp">
+    android:layout_marginTop="90dp">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -11,22 +11,27 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="25sp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
 
-    <ListView
-        android:id="@+id/lvPart"
-        android:padding="5dp"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/lvPart"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/actionButtonAdd"
-        android:layout_marginEnd="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:src="@drawable/add_fl_icon"
-        android:contentDescription="aaa"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/actionButtonAdd"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/add_fl_icon"
+            android:contentDescription="aaa"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </LinearLayout>
