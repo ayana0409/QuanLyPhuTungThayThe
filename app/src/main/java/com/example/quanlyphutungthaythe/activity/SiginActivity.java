@@ -42,7 +42,7 @@ public class SiginActivity extends AppCompatActivity {
             String account = edUsername.getText().toString().trim();
             String passWord = edPassword.getText().toString().trim();
             String confirm = edConfirm.getText().toString().trim();
-            if (account.equals("") && passWord.equals("")&& confirm.equals("")) {
+            if (account.isBlank() || passWord.equals("") || confirm.equals("")) {
                 Toast.makeText(SiginActivity.this, "Chưa nhập tài khoản hoặc mật khẩu", Toast.LENGTH_LONG).show();
 
             }

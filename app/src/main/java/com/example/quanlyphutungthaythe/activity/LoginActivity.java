@@ -94,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+        //Gán sự kiện lên nút đăng kí
         btnSigin.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, SiginActivity.class);
             startActivity(intent);
@@ -101,6 +102,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    //in hàm lưu trạng thái đăng nhập
     private void RestorePreferences() {
         SharedPreferences preferences = getSharedPreferences(perferName, MODE_PRIVATE);
 
